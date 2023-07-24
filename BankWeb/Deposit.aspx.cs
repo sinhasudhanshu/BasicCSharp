@@ -64,7 +64,7 @@ public partial class Deposit : System.Web.UI.Page
             lblBalance.Text = "" + dr.balance;
             Button2.Enabled = false;
             hd.Enabled = true;
-        }
+        } 
         catch (Exception ex)
         {
             lbl.Text = ex.Message;
