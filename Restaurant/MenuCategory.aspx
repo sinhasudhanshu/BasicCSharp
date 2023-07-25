@@ -10,6 +10,14 @@
     <form id="form1" runat="server">
        <div>
              <asp:Label ID="lbl" runat="server" Text=""></asp:Label>
+             <br />
+           <asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
+           <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+           <br />
+           <asp:Label ID="Label2" runat="server" Text="Comment"></asp:Label>
+           <asp:TextBox ID="txtComment" runat="server"></asp:TextBox>
+           <br />
+           <asp:Button ID="Button1" runat="server" Text="Submit" onclick="Button1_Click" />
         </div>
     </form>
 </body>
