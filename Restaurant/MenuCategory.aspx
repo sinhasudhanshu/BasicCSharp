@@ -18,6 +18,7 @@
            <asp:TextBox ID="txtComment" runat="server"></asp:TextBox>
            <br />
            <asp:Button ID="Button1" runat="server" Text="Submit" onclick="Button1_Click" />
+           <asp:Button ID="Button2" runat="server" Text="Clear" onclick="Button2_Click" />
         </div>
     </form>
 </body>

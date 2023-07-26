@@ -11,32 +11,40 @@
     <div>
     
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-            CellPadding="4" DataKeyNames="categoryno" DataSourceID="SqlDataSource1" 
-            ForeColor="#333333" GridLines="None">
-            <AlternatingRowStyle BackColor="White" />
+            CellPadding="3" DataKeyNames="categoryno" DataSourceID="SqlDataSource1" 
+            ForeColor="Black" GridLines="Vertical" 
+            onselectedindexchanged="GridView1_SelectedIndexChanged" BackColor="White" 
+            BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px">
+            <AlternatingRowStyle BackColor="#CCCCCC" />
             <Columns>
-                <asp:BoundField DataField="categoryno" HeaderText="categoryno" 
-                    InsertVisible="False" ReadOnly="True" SortExpression="categoryno" />
+               
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+               
                 <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
                 <asp:BoundField DataField="comment" HeaderText="comment" 
                     SortExpression="comment" />
+                    <asp:TemplateField HeaderText = "Show item">
+                    <ItemTemplate><a target= "cr" href='showcategoryitem.aspx?categoryno=<%#Eval("categoryno") %>>'>show item</a></ItemTemplate>
+                    </asp:TemplateField>
             </Columns>
-            <EditRowStyle BackColor="#7C6F57" />
-            <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-            <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-            <RowStyle BackColor="#E3EAEB" />
-            <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-            <SortedAscendingCellStyle BackColor="#F8FAFA" />
-            <SortedAscendingHeaderStyle BackColor="#246B61" />
-            <SortedDescendingCellStyle BackColor="#D4DFE1" />
-            <SortedDescendingHeaderStyle BackColor="#15524A" />
+            <FooterStyle BackColor="#CCCCCC" />
+            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+            <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#808080" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:restuarantConnectionString %>" 
+            DeleteCommand="delete from categoryinfo where categoryno=@categoryno"
+            UpdateCommand="update categoryinfo set name=@name,comment=@comment where categoryno=@categoryno"
+
             SelectCommand="SELECT * FROM [CategoryInfo]"></asp:SqlDataSource>
     
     </div>
     </form>
 </body>
 </html>
+

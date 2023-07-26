@@ -26,4 +26,10 @@ public partial class MenuCategory : System.Web.UI.Page
         }
     }
 
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        txtName.Text = "";
+        txtComment.Text = "";
+        lbl.Text = "";
+    }
 }
