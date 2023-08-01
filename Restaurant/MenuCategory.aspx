@@ -24,7 +24,7 @@
              <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
                  CellPadding="4" DataKeyNames="categoryno" DataSourceID="SqlDataSource1" 
                  ForeColor="#333333" GridLines="None" style="margin-left: 445px" 
-               Width="648px">
+               Width="648px" onrowdeleting="GridView1_RowDeleting">
                  <AlternatingRowStyle BackColor="White" />
                  <Columns>
                      <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />

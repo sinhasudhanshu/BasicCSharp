@@ -33,4 +33,18 @@ public partial class MenuCategory : System.Web.UI.Page
         txtComment.Text = "";
         lbl.Text = "";
     }
+    protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+    {
+        e.Cancel = true;
+        try
+        {
+            int category = Convert.ToInt32(e.Keys[0]);
+            (new DataSet1TableAdapters.CategoryInfoTableAdapter()).Delete(category);
+            Title = "Deleted";
+            GridView1.DataBind();
+        }
+        catch(Exception ex){
+            Title = ex.Message;
+        }
+    }
 }
