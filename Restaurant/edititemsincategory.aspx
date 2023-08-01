@@ -64,8 +64,7 @@
         </asp:SqlDataSource>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:restuarantConnectionString %>"
-            UpdateCommand = " update menuinfo set itemname=@itemname,price=@price,packing=@packing where itemno=@itemno"
-            DeleteCommand = "delete from menuinfo where itemno=@itemno" 
+         
             
             SelectCommand="SELECT categoryno, name, comment FROM CategoryInfo WHERE (categoryno = @categoryno)">
             <DeleteParameters>
