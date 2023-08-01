@@ -13,7 +13,7 @@ public class Utilities
         try
         {
             DataSet1TableAdapters.CategoryInfoTableAdapter da = new DataSet1TableAdapters.CategoryInfoTableAdapter();
-            String s = da.getCategoryNameByCategoryNo(Convert.ToInt32(categoryno));
+            String s ="" + da.getCategoryNameByCategoryNo(Convert.ToInt32(categoryno));
             return s;
         }
         catch
