@@ -92,7 +92,7 @@
               <Mapping SourceColumn="comment" DataSetColumn="comment" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="restuarantConnectionString (Web.config)" DbObjectName="restuarant.dbo.CategoryInfo" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="getCategoryNameByCategoryNo" Modifier="Public" Name="getCategoryNameByCategoryNo" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="getCategoryNameByCategoryNo">
+              <DbSource ConnectionRef="restuarantConnectionString (Web.config)" DbObjectName="restuarant.dbo.CategoryInfo" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="getCategoryNameByCategoryNo" Modifier="Public" Name="getCategoryNameByCategoryNo" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="getCategoryNameByCategoryNo">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT name FROM CategoryInfo WHERE (categoryno = @categoryno)</CommandText>
@@ -114,7 +114,7 @@ WHERE     (categoryno = @categoryno)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="restuarantConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="MaxCategory" Modifier="Public" Name="MaxCategory" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="MaxCategory">
+              <DbSource ConnectionRef="restuarantConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="MaxCategory" Modifier="Public" Name="MaxCategory" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="MaxCategory">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT MAX(categoryno) AS Expr1
@@ -194,7 +194,7 @@ FROM     MenuInfo</CommandText>
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Restuarant_x0020_Info" msprop:Generator_TableClassName="Restuarant_InfoDataTable" msprop:Generator_TableVarName="tableRestuarant_Info" msprop:Generator_RowChangedName="Restuarant_InfoRowChanged" msprop:Generator_TablePropName="Restuarant_Info" msprop:Generator_RowDeletingName="Restuarant_InfoRowDeleting" msprop:Generator_RowChangingName="Restuarant_InfoRowChanging" msprop:Generator_RowEvHandlerName="Restuarant_InfoRowChangeEventHandler" msprop:Generator_RowDeletedName="Restuarant_InfoRowDeleted" msprop:Generator_RowClassName="Restuarant_InfoRow" msprop:Generator_UserTableName="Restuarant Info" msprop:Generator_RowEvArgName="Restuarant_InfoRowChangeEvent">
+        <xs:element name="Restuarant_x0020_Info" msprop:Generator_TableClassName="Restuarant_InfoDataTable" msprop:Generator_TableVarName="tableRestuarant_Info" msprop:Generator_TablePropName="Restuarant_Info" msprop:Generator_RowDeletingName="Restuarant_InfoRowDeleting" msprop:Generator_RowChangingName="Restuarant_InfoRowChanging" msprop:Generator_RowEvHandlerName="Restuarant_InfoRowChangeEventHandler" msprop:Generator_RowDeletedName="Restuarant_InfoRowDeleted" msprop:Generator_UserTableName="Restuarant Info" msprop:Generator_RowChangedName="Restuarant_InfoRowChanged" msprop:Generator_RowEvArgName="Restuarant_InfoRowChangeEvent" msprop:Generator_RowClassName="Restuarant_InfoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="restuarantname" msprop:Generator_ColumnVarNameInTable="columnrestuarantname" msprop:Generator_ColumnPropNameInRow="restuarantname" msprop:Generator_ColumnPropNameInTable="restuarantnameColumn" msprop:Generator_UserColumnName="restuarantname">
@@ -223,7 +223,7 @@ FROM     MenuInfo</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CategoryInfo" msprop:Generator_TableClassName="CategoryInfoDataTable" msprop:Generator_TableVarName="tableCategoryInfo" msprop:Generator_RowChangedName="CategoryInfoRowChanged" msprop:Generator_TablePropName="CategoryInfo" msprop:Generator_RowDeletingName="CategoryInfoRowDeleting" msprop:Generator_RowChangingName="CategoryInfoRowChanging" msprop:Generator_RowEvHandlerName="CategoryInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="CategoryInfoRowDeleted" msprop:Generator_RowClassName="CategoryInfoRow" msprop:Generator_UserTableName="CategoryInfo" msprop:Generator_RowEvArgName="CategoryInfoRowChangeEvent">
+        <xs:element name="CategoryInfo" msprop:Generator_TableClassName="CategoryInfoDataTable" msprop:Generator_TableVarName="tableCategoryInfo" msprop:Generator_TablePropName="CategoryInfo" msprop:Generator_RowDeletingName="CategoryInfoRowDeleting" msprop:Generator_RowChangingName="CategoryInfoRowChanging" msprop:Generator_RowEvHandlerName="CategoryInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="CategoryInfoRowDeleted" msprop:Generator_UserTableName="CategoryInfo" msprop:Generator_RowChangedName="CategoryInfoRowChanged" msprop:Generator_RowEvArgName="CategoryInfoRowChangeEvent" msprop:Generator_RowClassName="CategoryInfoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="categoryno" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncategoryno" msprop:Generator_ColumnPropNameInRow="categoryno" msprop:Generator_ColumnPropNameInTable="categorynoColumn" msprop:Generator_UserColumnName="categoryno" type="xs:int" />
@@ -244,7 +244,7 @@ FROM     MenuInfo</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MenuInfo" msprop:Generator_TableClassName="MenuInfoDataTable" msprop:Generator_TableVarName="tableMenuInfo" msprop:Generator_TablePropName="MenuInfo" msprop:Generator_RowDeletingName="MenuInfoRowDeleting" msprop:Generator_RowChangingName="MenuInfoRowChanging" msprop:Generator_RowEvHandlerName="MenuInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="MenuInfoRowDeleted" msprop:Generator_UserTableName="MenuInfo" msprop:Generator_RowChangedName="MenuInfoRowChanged" msprop:Generator_RowEvArgName="MenuInfoRowChangeEvent" msprop:Generator_RowClassName="MenuInfoRow">
+        <xs:element name="MenuInfo" msprop:Generator_TableClassName="MenuInfoDataTable" msprop:Generator_TableVarName="tableMenuInfo" msprop:Generator_RowChangedName="MenuInfoRowChanged" msprop:Generator_TablePropName="MenuInfo" msprop:Generator_RowDeletingName="MenuInfoRowDeleting" msprop:Generator_RowChangingName="MenuInfoRowChanging" msprop:Generator_RowEvHandlerName="MenuInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="MenuInfoRowDeleted" msprop:Generator_RowClassName="MenuInfoRow" msprop:Generator_UserTableName="MenuInfo" msprop:Generator_RowEvArgName="MenuInfoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="itemno" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnitemno" msprop:Generator_ColumnPropNameInRow="itemno" msprop:Generator_ColumnPropNameInTable="itemnoColumn" msprop:Generator_UserColumnName="itemno" type="xs:int" />
