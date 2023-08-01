@@ -18,6 +18,7 @@ public partial class MenuCategory : System.Web.UI.Page
         {
             DataSet1TableAdapters.CategoryInfoTableAdapter da = new DataSet1TableAdapters.CategoryInfoTableAdapter();
             da.Insert(txtName.Text, txtComment.Text);
+            GridView1.DataBind();
             lbl.Text = "Item addded to the List" + da.MaxCategory();
         }
         catch (Exception ex)
