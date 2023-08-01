@@ -9,7 +9,9 @@ public partial class edititemsincategory : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Page.IsPostBack)
+            return;
+        lblName.Text = Utilities.getCategoryNameByCategoryNo(Request.QueryString["categoryno"]);
     }
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -21,7 +23,7 @@ public partial class edititemsincategory : System.Web.UI.Page
         {
             lbl.Text = "";
             DataSet1TableAdapters.MenuInfoTableAdapter da = new DataSet1TableAdapters.MenuInfoTableAdapter();
-            da.Insert(Convert.ToInt32(DropDownList1.Text), txtItemName.Text, Convert.ToInt32(txtPrice.Text), txtPacking.Text);
+            da.Insert(Convert.ToInt32(Request.QueryString["categoryno"]), txtItemName.Text, Convert.ToInt32(txtPrice.Text), txtPacking.Text);
             GridView1.DataBind();
             lbl.Text = "item is added" + da.MaxMenu();
         }
