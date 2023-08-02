@@ -8,10 +8,7 @@
     <asp:Label ID="lblName" runat="server" Text=""></asp:Label>
         <asp:Label ID="lbl" runat="server" Text=""></asp:Label>
         <br />
-        <br />
-      
        
-        <br />
         <asp:Label ID="Label1" runat="server" Text="ItemName"></asp:Label>
         <asp:TextBox ID="txtItemName" runat="server"></asp:TextBox>
         <br />
@@ -23,9 +20,6 @@
         <br />
         <asp:Button ID="Button1" runat="server" Text="Submit" onclick="Button1_Click" />
         <asp:Button ID="Button2" runat="server" Text="Clear" onclick="Button2_Click" />
-
-
-    
         <br />
         <br />
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
