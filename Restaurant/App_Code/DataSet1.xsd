@@ -92,7 +92,7 @@
               <Mapping SourceColumn="comment" DataSetColumn="comment" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="restuarantConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteCategory" Modifier="Public" Name="DeleteCategory" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="DeleteCategory">
+              <DbSource ConnectionRef="restuarantConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteCategory" Modifier="Public" Name="DeleteCategory" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteCategory">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[CategoryInfo] WHERE (([categoryno] = @Original_categoryno))</CommandText>
@@ -102,7 +102,7 @@
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="restuarantConnectionString (Web.config)" DbObjectName="restuarant.dbo.CategoryInfo" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="getCategoryNameByCategoryNo" Modifier="Public" Name="getCategoryNameByCategoryNo" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="getCategoryNameByCategoryNo">
+              <DbSource ConnectionRef="restuarantConnectionString (Web.config)" DbObjectName="restuarant.dbo.CategoryInfo" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="getCategoryNameByCategoryNo" Modifier="Public" Name="getCategoryNameByCategoryNo" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="getCategoryNameByCategoryNo">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT name
@@ -126,7 +126,7 @@ WHERE     (categoryno = @categoryno)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="restuarantConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="MaxCategory" Modifier="Public" Name="MaxCategory" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="MaxCategory">
+              <DbSource ConnectionRef="restuarantConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="MaxCategory" Modifier="Public" Name="MaxCategory" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="MaxCategory">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT MAX(categoryno) AS Expr1
