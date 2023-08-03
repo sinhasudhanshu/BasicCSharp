@@ -22,7 +22,9 @@
         <asp:TextBox ID="txtComments" runat="server"></asp:TextBox>
         <br />
         <asp:Label ID="Label4" runat="server" Text="BookingStatus"></asp:Label>
-        <asp:TextBox ID="txtBookingStatus" runat="server"></asp:TextBox>
+        
+        <br />
+        
         <br />
         <asp:Button ID="Button1" runat="server" Text="Submit" onclick="Button1_Click" />
         <asp:Button ID="Button2" runat="server" Text="clear" onclick="Button2_Click" />
